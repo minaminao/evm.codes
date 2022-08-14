@@ -2,32 +2,32 @@
   "00": {
     "input": "",
     "output": "",
-    "description": "Halts execution"
+    "description": "実行を停止する"
   },
   "01": {
     "input": "a | b",
     "output": "a + b",
-    "description": "Addition operation"
+    "description": "加算"
   },
   "02": {
     "input": "a | b",
     "output": "a * b",
-    "description": "Multiplication operation"
+    "description": "乗算"
   },
   "03": {
     "input": "a | b",
     "output": "a - b",
-    "description": "Subtraction operation"
+    "description": "減算"
   },
   "04": {
     "input": "a | b",
     "output": "a // b",
-    "description": "Integer division operation"
+    "description": "整数の除算"
   },
   "05": {
     "input": "a | b",
     "output": "a // b",
-    "description": "Signed integer division operation (truncated)"
+    "description": "符号付き整数の除算（切り捨て）"
   },
   "06": {
     "input": "a | b",
