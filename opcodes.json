@@ -32,22 +32,22 @@
   "06": {
     "input": "a | b",
     "output": "a % b",
-    "description": "Modulo remainder operation"
+    "description": "剰余"
   },
   "07": {
     "input": "a | b",
     "output": "a % b",
-    "description": "Signed modulo remainder operation"
+    "description": "符号付き剰余"
   },
   "08": {
     "input": "a | b | N",
     "output": "(a + b) % N",
-    "description": "Modulo addition operation"
+    "description": "加算して剰余"
   },
   "09": {
     "input": "a | b | N",
     "output": "(a * b) % N",
-    "description": "Modulo multiplication operation"
+    "description": "乗算して剰余"
   },
   "0a": {
     "input": "a | exponent",
