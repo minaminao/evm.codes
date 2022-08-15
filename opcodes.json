@@ -2,7 +2,7 @@
   "00": {
     "input": "",
     "output": "",
-    "description": "実行を停止する"
+    "description": "実行を停止"
   },
   "01": {
     "input": "a | b",
@@ -52,7 +52,7 @@
   "0a": {
     "input": "a | exponent",
     "output": "a ** exponent",
-    "description": "Exponential operation",
+    "description": "指数",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -67,7 +67,7 @@
   "0b": {
     "input": "b | x",
     "output": "y",
-    "description": "Extend length of two’s complement signed integer"
+    "description": "2の補数表現で符号付き整数を拡張"
   },
   "0c": {
     "input": "",
@@ -92,72 +92,72 @@
   "10": {
     "input": "a | b",
     "output": "a < b",
-    "description": "Less-than comparison"
+    "description": "より小さいか比較"
   },
   "11": {
     "input": "a | b",
     "output": "a > b",
-    "description": "Greater-than comparison"
+    "description": "より大きいか比較"
   },
   "12": {
     "input": "a | b",
     "output": "a < b",
-    "description": "Signed less-than comparison"
+    "description": "符号付きでより小さいか比較"
   },
   "13": {
     "input": "a | b",
     "output": "a > b",
-    "description": "Signed greater-than comparison"
+    "description": "符号付きでより大きいか比較"
   },
   "14": {
     "input": "a | b",
     "output": "a == b",
-    "description": "Equality comparison"
+    "description": "等しいか比較"
   },
   "15": {
     "input": "a",
     "output": "a == 0",
-    "description": "Simple not operator"
+    "description": "シンプルな否定"
   },
   "16": {
     "input": "a | b",
     "output": "a & b",
-    "description": "Bitwise AND operation"
+    "description": "ビット単位のAND"
   },
   "17": {
     "input": "a | b",
     "output": "a \\| b",
-    "description": "Bitwise OR operation"
+    "description": "ビット単位のOR"
   },
   "18": {
     "input": "a | b",
     "output": "a ^ b",
-    "description": "Bitwise XOR operation"
+    "description": "ビット単位のXOR"
   },
   "19": {
     "input": "a",
     "output": "~a",
-    "description": "Bitwise NOT operation"
+    "description": "ビット単位のNOT"
   },
   "1a": {
     "input": "i | x",
     "output": "y",
-    "description": "Retrieve single byte from word"
+    "description": "ワードから1バイトを取り出す"
   },
   "1b": {
     "input": "shift | value",
     "output": "value << shift",
-    "description": "Left shift operation"
+    "description": "左シフト"
   },
   "1c": {
     "input": "shift | value",
     "output": "value >> shift",
-    "description": "Logical right shift operation"
+    "description": "論理右シフト"
   },
   "1d": {
     "input": "shift | value",
     "output": "value >> shift",
-    "description": "Arithmetic (signed) right shift operation"
+    "description": "算術（符号付き）右シフト"
   },
   "1e": {
     "input": "",
@@ -172,7 +172,7 @@
   "20": {
     "input": "offset | size",
     "output": "hash",
-    "description": "Compute Keccak-256 hash",
+    "description": "Keccak-256ハッシュを計算",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -270,12 +270,12 @@
   "30": {
     "input": "",
     "output": "address",
-    "description": "Get address of currently executing account"
+    "description": "現在実行中のアカウントのアドレスを取得"
   },
   "31": {
     "input": "address",
     "output": "balance",
-    "description": "Get balance of the given account",
+    "description": "指定したアカウントの残高を取得",
     "dynamicFee": {
       "berlin": {
         "inputs": {
@@ -290,32 +290,32 @@
   "32": {
     "input": "",
     "output": "address",
-    "description": "Get execution origination address"
+    "description": "実行の起点となるアドレスを取得"
   },
   "33": {
     "input": "",
     "output": "address",
-    "description": "Get caller address"
+    "description": "呼び出し元アドレスの取得"
   },
   "34": {
     "input": "",
     "output": "value",
-    "description": "Get deposited value by the instruction/transaction responsible for this execution"
+    "description": "この実行を行った命令/トランザクションのvalueを取得"
   },
   "35": {
     "input": "i",
     "output": "data[i]",
-    "description": "Get input data of current environment"
+    "description": "現在の環境のインプットデータを取得"
   },
   "36": {
     "input": "",
     "output": "size",
-    "description": "Get size of input data in current environment"
+    "description": "現在の環境のインプットデータのサイズを取得"
   },
   "37": {
     "input": "destOffset | offset | size",
     "output": "",
-    "description": "Copy input data in current environment to memory",
+    "description": "現在の環境のインプットデータをメモリにコピー",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -338,12 +338,12 @@
   "38": {
     "input": "",
     "output": "size",
-    "description": "Get size of code running in current environment"
+    "description": "現在の環境で実行しているコードのサイズをコピー"
   },
   "39": {
     "input": "destOffset | offset | size",
     "output": "",
-    "description": "Copy code running in current environment to memory",
+    "description": "現在の環境で実行しているコードをメモリにコピー",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -366,12 +366,12 @@
   "3a": {
     "input": "",
     "output": "price",
-    "description": "Get price of gas in current environment"
+    "description": "現在の環境のガスプライスを取得"
   },
   "3b": {
     "input": "address",
     "output": "size",
-    "description": "Get size of an account’s code",
+    "description": "アカウントのコードのサイズを取得",
     "dynamicFee": {
       "berlin": {
         "inputs": {
@@ -386,7 +386,7 @@
   "3c": {
     "input": "address | destOffset | offset | size",
     "output": "",
-    "description": "Copy an account’s code to memory",
+    "description": "アカウントのコードをメモリにコピー",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -429,12 +429,12 @@
   "3d": {
     "input": "",
     "output": "size",
-    "description": "Get size of output data from the previous call from the current environment"
+    "description": "現在の環境から前の呼び出しのアウトプットデータのサイズを取得"
   },
   "3e": {
     "input": "destOffset | offset | size",
     "output": "",
-    "description": "Copy output data from the previous call to memory",
+    "description": "前の呼び出しのアウトプットデータをメモリにコピー",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -457,7 +457,7 @@
   "3f": {
     "input": "address",
     "output": "hash",
-    "description": "Get hash of an account’s code",
+    "description": "アカウントのコードのハッシュを取得",
     "dynamicFee": {
       "berlin": {
         "inputs": {
@@ -472,47 +472,47 @@
   "40": {
     "input": "blockNumber",
     "output": "hash",
-    "description": "Get the hash of one of the 256 most recent complete blocks"
+    "description": "最新の256個の完全なブロックのうち1つのハッシュを取得"
   },
   "41": {
     "input": "",
     "output": "address",
-    "description": "Get the block’s beneficiary address"
+    "description": "ブロックの受益者アドレスを取得"
   },
   "42": {
     "input": "",
     "output": "timestamp",
-    "description": "Get the block’s timestamp"
+    "description": "ブロックのタイムスタンプを取得"
   },
   "43": {
     "input": "",
     "output": "blockNumber",
-    "description": "Get the block’s number"
+    "description": "ブロックナンバーを取得"
   },
   "44": {
     "input": "",
     "output": "difficulty",
-    "description": "Get the block’s difficulty"
+    "description": "ブロックの難易度を取得"
   },
   "45": {
     "input": "",
     "output": "gasLimit",
-    "description": "Get the block’s gas limit"
+    "description": "ブロックのガスリミットを取得"
   },
   "46": {
     "input": "",
     "output": "chainId",
-    "description": "Get the chain ID"
+    "description": "チェーンIDを取得"
   },
   "47": {
     "input": "",
     "output": "balance",
-    "description": "Get balance of currently executing account"
+    "description": "現在実行中のアカウントの残高を取得"
   },
   "48": {
     "input": "",
     "output": "baseFee",
-    "description": "Get the base fee"
+    "description": "ベースフィーを取得"
   },
   "49": {
     "input": "",
@@ -552,12 +552,12 @@
   "50": {
     "input": "y",
     "output": "",
-    "description": "Remove item from stack"
+    "description": "スタックからアイテムを削除"
   },
   "51": {
     "input": "offset",
     "output": "value",
-    "description": "Load word from memory",
+    "description": "メモリからワードをロード",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -576,7 +576,7 @@
   "52": {
     "input": "offset | value",
     "output": "",
-    "description": "Save word to memory",
+    "description": "メモリへワードを保存",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -595,7 +595,7 @@
   "53": {
     "input": "offset | value",
     "output": "",
-    "description": "Save byte to memory",
+    "description": "メモリへバイトを保存",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -614,7 +614,7 @@
   "54": {
     "input": "key",
     "output": "value",
-    "description": "Load word from storage",
+    "description": "ストレージからワードをロード",
     "dynamicFee": {
       "berlin": {
         "inputs": {
@@ -629,7 +629,7 @@
   "55": {
     "input": "key | value",
     "output": "",
-    "description": "Save word to storage",
+    "description": "ストレージへワードを保存",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -712,32 +712,32 @@
   "56": {
     "input": "counter",
     "output": "",
-    "description": "Alter the program counter"
+    "description": "プログラムカウンターを変更"
   },
   "57": {
     "input": "counter | b",
     "output": "",
-    "description": "Conditionally alter the program counter"
+    "description": "プログラムカウンターを条件付きで変更"
   },
   "58": {
     "input": "",
     "output": "counter",
-    "description": "Get the value of the program counter prior to the increment corresponding to this instruction"
+    "description": "この命令に対応するインクリメント前のプログラムカウンターの値を取得"
   },
   "59": {
     "input": "",
     "output": "size",
-    "description": "Get the size of active memory in bytes"
+    "description": "アクティブなメモリのサイズをバイト単位で取得"
   },
   "5a": {
     "input": "",
     "output": "gas",
-    "description": "Get the amount of available gas, including the corresponding reduction for the cost of this instruction"
+    "description": "この命令のコストに相当する減少分を含む、利用可能なガスの量を取得"
   },
   "5b": {
     "input": "",
     "output": "",
-    "description": "Mark a valid destination for jumps"
+    "description": "ジャンプの有効な行き先をマーク"
   },
   "5c": {
     "input": "",
@@ -762,327 +762,327 @@
   "60": {
     "input": "",
     "output": "value",
-    "description": "Place 1 byte item on stack"
+    "description": "1バイトのアイテムをスタックに配置"
   },
   "61": {
     "input": "",
     "output": "value",
-    "description": "Place 2 byte item on stack"
+    "description": "2バイトのアイテムをスタックに配置"
   },
   "62": {
     "input": "",
     "output": "value",
-    "description": "Place 3 byte item on stack"
+    "description": "3バイトのアイテムをスタックに配置"
   },
   "63": {
     "input": "",
     "output": "value",
-    "description": "Place 4 byte item on stack"
+    "description": "4バイトのアイテムをスタックに配置"
   },
   "64": {
     "input": "",
     "output": "value",
-    "description": "Place 5 byte item on stack"
+    "description": "5バイトのアイテムをスタックに配置"
   },
   "65": {
     "input": "",
     "output": "value",
-    "description": "Place 6 byte item on stack"
+    "description": "6バイトのアイテムをスタックに配置"
   },
   "66": {
     "input": "",
     "output": "value",
-    "description": "Place 7 byte item on stack"
+    "description": "7バイトのアイテムをスタックに配置"
   },
   "67": {
     "input": "",
     "output": "value",
-    "description": "Place 8 byte item on stack"
+    "description": "8バイトのアイテムをスタックに配置"
   },
   "68": {
     "input": "",
     "output": "value",
-    "description": "Place 9 byte item on stack"
+    "description": "9バイトのアイテムをスタックに配置"
   },
   "69": {
     "input": "",
     "output": "value",
-    "description": "Place 10 byte item on stack"
+    "description": "10バイトのアイテムをスタックに配置"
   },
   "6a": {
     "input": "",
     "output": "value",
-    "description": "Place 11 byte item on stack"
+    "description": "11バイトのアイテムをスタックに配置"
   },
   "6b": {
     "input": "",
     "output": "value",
-    "description": "Place 12 byte item on stack"
+    "description": "12バイトのアイテムをスタックに配置"
   },
   "6c": {
     "input": "",
     "output": "value",
-    "description": "Place 13 byte item on stack"
+    "description": "13バイトのアイテムをスタックに配置"
   },
   "6d": {
     "input": "",
     "output": "value",
-    "description": "Place 14 byte item on stack"
+    "description": "14バイトのアイテムをスタックに配置"
   },
   "6e": {
     "input": "",
     "output": "value",
-    "description": "Place 15 byte item on stack"
+    "description": "15バイトのアイテムをスタックに配置"
   },
   "6f": {
     "input": "",
     "output": "value",
-    "description": "Place 16 byte item on stack"
+    "description": "16バイトのアイテムをスタックに配置"
   },
   "70": {
     "input": "",
     "output": "value",
-    "description": "Place 17 byte item on stack"
+    "description": "17バイトのアイテムをスタックに配置"
   },
   "71": {
     "input": "",
     "output": "value",
-    "description": "Place 18 byte item on stack"
+    "description": "18バイトのアイテムをスタックに配置"
   },
   "72": {
     "input": "",
     "output": "value",
-    "description": "Place 19 byte item on stack"
+    "description": "19バイトのアイテムをスタックに配置"
   },
   "73": {
     "input": "",
     "output": "value",
-    "description": "Place 20 byte item on stack"
+    "description": "20バイトのアイテムをスタックに配置"
   },
   "74": {
     "input": "",
     "output": "value",
-    "description": "Place 21 byte item on stack"
+    "description": "21バイトのアイテムをスタックに配置"
   },
   "75": {
     "input": "",
     "output": "value",
-    "description": "Place 22 byte item on stack"
+    "description": "22バイトのアイテムをスタックに配置"
   },
   "76": {
     "input": "",
     "output": "value",
-    "description": "Place 23 byte item on stack"
+    "description": "23バイトのアイテムをスタックに配置"
   },
   "77": {
     "input": "",
     "output": "value",
-    "description": "Place 24 byte item on stack"
+    "description": "24バイトのアイテムをスタックに配置"
   },
   "78": {
     "input": "",
     "output": "value",
-    "description": "Place 25 byte item on stack"
+    "description": "25バイトのアイテムをスタックに配置"
   },
   "79": {
     "input": "",
     "output": "value",
-    "description": "Place 26 byte item on stack"
+    "description": "26バイトのアイテムをスタックに配置"
   },
   "7a": {
     "input": "",
     "output": "value",
-    "description": "Place 27 byte item on stack"
+    "description": "27バイトのアイテムをスタックに配置"
   },
   "7b": {
     "input": "",
     "output": "value",
-    "description": "Place 28 byte item on stack"
+    "description": "28バイトのアイテムをスタックに配置"
   },
   "7c": {
     "input": "",
     "output": "value",
-    "description": "Place 29 byte item on stack"
+    "description": "29バイトのアイテムをスタックに配置"
   },
   "7d": {
     "input": "",
     "output": "value",
-    "description": "Place 30 byte item on stack"
+    "description": "30バイトのアイテムをスタックに配置"
   },
   "7e": {
     "input": "",
     "output": "value",
-    "description": "Place 31 byte item on stack"
+    "description": "31バイトのアイテムをスタックに配置"
   },
   "7f": {
     "input": "",
     "output": "value",
-    "description": "Place 32 byte (full word) item on stack"
+    "description": "32バイト（完全なワード）のアイテムをスタックに配置"
   },
   "80": {
     "input": "value",
     "output": "value | value",
-    "description": "Duplicate 1st stack item"
+    "description": "スタックの1個目のアイテムを複製"
   },
   "81": {
     "input": "a | b",
     "output": "b | a | b",
-    "description": "Duplicate 2nd stack item"
+    "description": "スタックの2個目のアイテムを複製"
   },
   "82": {
     "input": "a | b | c",
     "output": "c | a | b | c",
-    "description": "Duplicate 3rd stack item"
+    "description": "スタックの3個目のアイテムを複製"
   },
   "83": {
     "input": "... | value",
     "output": "value | ... | value",
-    "description": "Duplicate 4th stack item"
+    "description": "スタックの4個目のアイテムを複製"
   },
   "84": {
     "input": "... | value",
     "output": "value | ... | value",
-    "description": "Duplicate 5th stack item"
+    "description": "スタックの5個目のアイテムを複製"
   },
   "85": {
     "input": "... | value",
     "output": "value | ... | value",
-    "description": "Duplicate 6th stack item"
+    "description": "スタックの6個目のアイテムを複製"
   },
   "86": {
     "input": "... | value",
     "output": "value | ... | value",
-    "description": "Duplicate 7th stack item"
+    "description": "スタックの7個目のアイテムを複製"
   },
   "87": {
     "input": "... | value",
     "output": "value | ... | value",
-    "description": "Duplicate 8th stack item"
+    "description": "スタックの8個目のアイテムを複製"
   },
   "88": {
     "input": "... | value",
     "output": "value | ... | value",
-    "description": "Duplicate 9th stack item"
+    "description": "スタックの9個目のアイテムを複製"
   },
   "89": {
     "input": "... | value",
     "output": "value | ... | value",
-    "description": "Duplicate 10th stack item"
+    "description": "スタックの10個目のアイテムを複製"
   },
   "8a": {
     "input": "... | value",
     "output": "value | ... | value",
-    "description": "Duplicate 11th stack item"
+    "description": "スタックの11個目のアイテムを複製"
   },
   "8b": {
     "input": "... | value",
     "output": "value | ... | value",
-    "description": "Duplicate 12th stack item"
+    "description": "スタックの12個目のアイテムを複製"
   },
   "8c": {
     "input": "... | value",
     "output": "value | ... | value",
-    "description": "Duplicate 13th stack item"
+    "description": "スタックの13個目のアイテムを複製"
   },
   "8d": {
     "input": "... | value",
     "output": "value | ... | value",
-    "description": "Duplicate 14th stack item"
+    "description": "スタックの14個目のアイテムを複製"
   },
   "8e": {
     "input": "... | value",
     "output": "value | ... | value",
-    "description": "Duplicate 15th stack item"
+    "description": "スタックの15個目のアイテムを複製"
   },
   "8f": {
     "input": "... | value",
     "output": "value | ... | value",
-    "description": "Duplicate 16th stack item"
+    "description": "スタックの16個目のアイテムを複製"
   },
   "90": {
     "input": "a | b",
     "output": "b | a",
-    "description": "Exchange 1st and 2nd stack items"
+    "description": "スタックの1個目と2個目のアイテムを交換"
   },
   "91": {
     "input": "a | b | c",
     "output": "c | b | a",
-    "description": "Exchange 1st and 3rd stack items"
+    "description": "スタックの1個目と3個目のアイテムを交換"
   },
   "92": {
     "input": "a | ... | b",
     "output": "b | ... | a",
-    "description": "Exchange 1st and 4th stack items"
+    "description": "スタックの1個目と4個目のアイテムを交換"
   },
   "93": {
     "input": "a | ... | b",
     "output": "b | ... | a",
-    "description": "Exchange 1st and 5th stack items"
+    "description": "スタックの1個目と5個目のアイテムを交換"
   },
   "94": {
     "input": "a | ... | b",
     "output": "b | ... | a",
-    "description": "Exchange 1st and 6th stack items"
+    "description": "スタックの1個目と6個目のアイテムを交換"
   },
   "95": {
     "input": "a | ... | b",
     "output": "b | ... | a",
-    "description": "Exchange 1st and 7th stack items"
+    "description": "スタックの1個目と7個目のアイテムを交換"
   },
   "96": {
     "input": "a | ... | b",
     "output": "b | ... | a",
-    "description": "Exchange 1st and 8th stack items"
+    "description": "スタックの1個目と8個目のアイテムを交換"
   },
   "97": {
     "input": "a | ... | b",
     "output": "b | ... | a",
-    "description": "Exchange 1st and 9th stack items"
+    "description": "スタックの1個目と9個目のアイテムを交換"
   },
   "98": {
     "input": "a | ... | b",
     "output": "b | ... | a",
-    "description": "Exchange 1st and 10th stack items"
+    "description": "スタックの1個目と10個目のアイテムを交換"
   },
   "99": {
     "input": "a | ... | b",
     "output": "b | ... | a",
-    "description": "Exchange 1st and 11th stack items"
+    "description": "スタックの1個目と11個目のアイテムを交換"
   },
   "9a": {
     "input": "a | ... | b",
     "output": "b | ... | a",
-    "description": "Exchange 1st and 12th stack items"
+    "description": "スタックの1個目と12個目のアイテムを交換"
   },
   "9b": {
     "input": "a | ... | b",
     "output": "b | ... | a",
-    "description": "Exchange 1st and 13th stack items"
+    "description": "スタックの1個目と13個目のアイテムを交換"
   },
   "9c": {
     "input": "a | ... | b",
     "output": "b | ... | a",
-    "description": "Exchange 1st and 14th stack items"
+    "description": "スタックの1個目と14個目のアイテムを交換"
   },
   "9d": {
     "input": "a | ... | b",
     "output": "b | ... | a",
-    "description": "Exchange 1st and 15th stack items"
+    "description": "スタックの1個目と15個目のアイテムを交換"
   },
   "9e": {
     "input": "a | ... | b",
     "output": "b | ... | a",
-    "description": "Exchange 1st and 16th stack items"
+    "description": "スタックの1個目と16個目のアイテムを交換"
   },
   "9f": {
     "input": "a | ... | b",
     "output": "b | ... | a",
-    "description": "Exchange 1st and 17th stack items"
+    "description": "スタックの1個目と17個目のアイテムを交換"
   },
   "a0": {
     "input": "offset | size",
     "output": "",
-    "description": "Append log record with no topics",
+    "description": "トピックがないログレコードを追加",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -1105,7 +1105,7 @@
   "a1": {
     "input": "offset | size | topic",
     "output": "",
-    "description": "Append log record with one topic",
+    "description": "1個のトピック付きのログレコードを追加",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -1128,7 +1128,7 @@
   "a2": {
     "input": "offset | size | topic1 | topic2",
     "output": "",
-    "description": "Append log record with two topics",
+    "description": "2個のトピック付きのログレコードを追加",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -1151,7 +1151,7 @@
   "a3": {
     "input": "offset | size | topic1 | topic2 | topic3",
     "output": "",
-    "description": "Append log record with three topics",
+    "description": "3個のトピック付きのログレコードを追加",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -1174,7 +1174,7 @@
   "a4": {
     "input": "offset | size | topic1 | topic2 | topic3 | topic4",
     "output": "",
-    "description": "Append log record with four topics",
+    "description": "4個のトピック付きのログレコードを追加",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -1572,7 +1572,7 @@
   "f0": {
     "input": "value | offset | size",
     "output": "address",
-    "description": "Create a new account with associated code",
+    "description": "コードを紐付けて新しいアカウントを作成",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -1603,7 +1603,7 @@
   "f1": {
     "input": "gas | address | value | argsOffset | argsSize | retOffset | retSize",
     "output": "success",
-    "description": "Message-call into an account",
+    "description": "アカウントにメッセージコール",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -1722,7 +1722,7 @@
   "f2": {
     "input": "gas | address | value | argsOffset | argsSize | retOffset | retSize",
     "output": "success",
-    "description": "Message-call into this account with alternative account’s code",
+    "description": "アカウントに別のアカウントのコードでメッセージコール",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -1797,7 +1797,7 @@
   "f3": {
     "input": "offset | size",
     "output": "",
-    "description": "Halt execution returning output data",
+    "description": "アウトプットデータを返す実行の停止",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -1820,7 +1820,7 @@
   "f4": {
     "input": "gas | address | argsOffset | argsSize | retOffset | retSize",
     "output": "success",
-    "description": "Message-call into this account with an alternative account’s code, but persisting the current values for sender and value",
+    "description": "アカウントに別のアカウントのコードでメッセージコール（ただしsenderとvalueについて現在の値を保持）",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -1887,7 +1887,7 @@
   "f5": {
     "input": "value | offset | size | salt",
     "output": "address",
-    "description": "Create a new account with associated code at a predictable address",
+    "description": "予測可能なアドレスでコードを紐付けて新しいアカウントを作成",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -1938,7 +1938,7 @@
   "fa": {
     "input": "gas | address | argsOffset | argsSize | retOffset | retSize",
     "output": "success",
-    "description": "Static message-call into an account",
+    "description": "アカウントに静的なメッセージコール",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -2015,7 +2015,7 @@
   "fd": {
     "input": "offset | size",
     "output": "",
-    "description": "Halt execution reverting state changes but returning data and remaining gas",
+    "description": "状態の変化を元に戻して実行を停止（ただしデータを返しガスを残す）",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -2038,7 +2038,7 @@
   "fe": {
     "input": "",
     "output": "",
-    "description": "Designated invalid instruction",
+    "description": "指定された無効な命令",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -2053,7 +2053,7 @@
   "ff": {
     "input": "address",
     "output": "",
-    "description": "Halt execution and register account for later deletion",
+    "description": "実行の停止して、後に削除されるアカウントを登録",
     "dynamicFee": {
       "homestead": {},
       "tangerineWhistle": {
