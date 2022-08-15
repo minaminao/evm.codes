@@ -7,9 +7,9 @@ group: System operations
 
 ## Notes
 
-Creates a new contract. Enters a new sub [context](/about) of the calculated destination address and executes the provided initialisation code, then resumes the current context.
+新しいコントラクトを作成します。計算された宛先アドレスの新しいサブ[コンテキスト](/about)に入り、与えられた初期化コードを実行し、現在のコンテキストを再開します。
 
-Should deployment succeed, the new account's [code](/about) is set to the [return data](/about) resulting from executing the initialisation code.
+デプロイが成功すると、新しいアカウントの[コード](/about)は、初期化コードを実行した結果の[リターンデータ](/about)に設定されます。
 
 The destination address is calculated as the rightmost 20 bytes (160 bits) of the Keccak-256 hash of the rlp encoding of the sender address followed by its nonce. That is:
 

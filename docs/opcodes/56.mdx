@@ -7,9 +7,9 @@ group: Stack Memory Storage and Flow Operations
 
 ## Notes
 
-The program counter (PC) is a byte offset in the deployed [code](/about). It indicates which instruction will be executed next. When an [ADD](/#01) is executed, for example, the PC is incremented by 1, since the instruction is 1 byte. The [PUSH](/#60) instructions are bigger than one byte, and so will increment the counter accordingly.
+プログラムカウンタ（PC）は、デプロイされた[コード](/about)内のバイトオフセットです。次にどの命令が実行されるかを示します。例えば、[ADD](/#01)が実行されると、その命令は1バイトなので、PCは1だけインクリメントされます。[PUSH](/#60)命令は1バイトより大きいので、それに応じてカウンタがインクリメントされます。
 
-The **JUMP** instruction alters the program counter, thus breaking the linear path of the execution to another point in the deployed [code](/about). It is used to implement functionalities like functions.
+**JUMP**命令は、プログラムカウンタを変更することにより、デプロイされた[コード](/about)の別のポイントへの実行の線形なパスを断ちます。関数のような機能性を実装するために使用されます。
 
 ## Stack input
 
