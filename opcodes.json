@@ -295,7 +295,7 @@
   "33": {
     "input": "",
     "output": "address",
-    "description": "呼び出し元アドレスの取得"
+    "description": "コール元アドレスの取得"
   },
   "34": {
     "input": "",
@@ -429,12 +429,12 @@
   "3d": {
     "input": "",
     "output": "size",
-    "description": "現在の環境から前の呼び出しのアウトプットデータのサイズを取得"
+    "description": "現在の環境から前のコールのアウトプットデータのサイズを取得"
   },
   "3e": {
     "input": "destOffset | offset | size",
     "output": "",
-    "description": "前の呼び出しのアウトプットデータをメモリにコピー",
+    "description": "前のコールのアウトプットデータをメモリにコピー",
     "dynamicFee": {
       "homestead": {
         "inputs": {
