@@ -291,9 +291,9 @@ const AboutPage = () => {
         </p>
       </SectionWrapper>
 
-      <SectionWrapper header={<H3>Access sets</H3>} anchorKey="accesssets">
+      <SectionWrapper header={<H3>アクセスセット</H3>} anchorKey="accesssets">
         <p className="pb-8">
-          アクセスセットはHハードフォーク<b>Berlin</b>
+          アクセスセットはハードフォーク<b>Berlin</b>
           で導入されました。
           これらはトランザクションごとに（コールコンテキストごとではなく）保持されます。
           タッチ済みコントラクトのアドレスと、タッチ済みコントラクトのストレージスロットの2つが存在します。
@@ -341,18 +341,19 @@ const AboutPage = () => {
         </p>
       </SectionWrapper>
 
-      <SectionWrapper header={<H3>Gas refunds</H3>} anchorKey="gasrefunds">
+      <SectionWrapper header={<H3>ガスの払い戻し</H3>} anchorKey="gasrefunds">
         <p className="pb-8">
-          Some opcodes can trigger gas refunds, which reduces the gas cost of a
-          transaction. However the gas refund is applied at the end of a
-          transaction, meaning that a transaction always need enough gas to run
-          as if there was no refunds. The amount of gas that can be refunded is
-          also limited, to half of the total transaction cost before the
-          hardfork <b>London</b>, otherwise to a fifth. Starting from the
-          hardfork <b>London</b> also, only{' '}
-          <RelativeLink to="#55" title="SSTORE" /> may trigger refunds. Before
-          that, <RelativeLink to="#FF" title="SELFDESTRUCT" /> could also
-          trigger refunds.
+          いくつかのオペコードはガスの払い戻しをトリガーでき、これはトランザクションのガスコストを削減します。
+          しかし、ガスの払い戻しはトランザクションの最後に適用されます。
+          つまり、トランザクションは払い戻しをないものとして実行するためにガスは常に十分な量を必要とします。
+          払い戻し可能なガスの量も制限されており、ハードフォーク<b>London</b>
+          以前は総トランザクションコストの半分、それ以外は5分の1までとされています。
+          ハードフォーク<b>London</b>
+          からは、
+          <RelativeLink to="#55" title="SSTORE" />
+          のみになります。それ以前は、
+          <RelativeLink to="#FF" title="SELFDESTRUCT" />
+          も払い戻しのトリガーになっていました。
         </p>
       </SectionWrapper>
 

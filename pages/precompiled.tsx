@@ -66,7 +66,7 @@ const PrecompiledPage = ({
         <p className="pb-6">
           ハードフォーク<b>Berlin</b>
           の後、すべてのプリコンパイル済みコントラクトのアドレスは、常に「ウォーム」とみなされます。セクション
-          <Link to="about" title="access sets" />
+          <Link to="about" title="アクセスセット" />
           を参照してください。
         </p>
       </Container>
