@@ -293,43 +293,51 @@ const AboutPage = () => {
 
       <SectionWrapper header={<H3>Access sets</H3>} anchorKey="accesssets">
         <p className="pb-8">
-          Access sets have been introduced in the hardfork <b>Berlin</b>. They
-          are kept per transaction (and not per call context). Two of them
-          exist: the touched contracts addresses, and the touched contract
-          storage slots. If an address or slot is present in the set, it is
-          called 'warm', otherwise it is 'cold'. The dynamic cost of some
-          opcodes depends on whether the address or slot is warm or cold.
+          アクセスセットはHハードフォーク<b>Berlin</b>
+          で導入されました。
+          これらはトランザクションごとに（コールコンテキストごとではなく）保持されます。
+          タッチ済みコントラクトのアドレスと、タッチ済みコントラクトのストレージスロットの2つが存在します。
+          アドレスまたはスロットがセット内に存在する場合、それは「ウォーム」と呼ばれ、そうでない場合は「コールド」と呼ばれます。
+          いくつかのオペコードの動的コストは、アドレスまたはスロットがウォームかコールドかに依存します。
           <ul className="list-disc mb-2">
             <li className="ml-6">
-              Addresses: a set of contract addresses that have been touched in
-              the current transaction. It is initialized with the sender and
-              receiver (or the new contract address in case of a creation) of
-              the transaction, as well as all the{' '}
-              <RelativeLink to="precompiled" title="precompiled contracts" />.
-              When an opcode accesses an address that is not present in the set,
-              it adds it in it. The relevant opcodes are{' '}
-              <RelativeLink to="#3B" title="EXTCODESIZE" />,{' '}
-              <RelativeLink to="#3C" title="EXTCODECOPY" />,{' '}
-              <RelativeLink to="#3F" title="EXTCODEHASH" />,{' '}
-              <RelativeLink to="#31" title="BALANCE" />,{' '}
-              <RelativeLink to="#F1" title="CALL" />,{' '}
-              <RelativeLink to="#F2" title="CALLCODE" />,{' '}
-              <RelativeLink to="#F4" title="DELEGATECALL" />,{' '}
-              <RelativeLink to="#FA" title="STATICCALL" />,{' '}
-              <RelativeLink to="#F0" title="CREATE" />,{' '}
-              <RelativeLink to="#F5" title="CREATE2" /> and{' '}
-              <RelativeLink to="#FF" title="SELFDESTRUCT" />.
+              アドレス:{' '}
+              現在のトランザクションでタッチ済みのコントラクトアドレスの集合。
+              トランザクションの送信者と受信者（またはコントラクト作成の場合は新しいコントラクトアドレス）、およびすべての
+              <RelativeLink
+                to="precompiled"
+                title="プリコンパイル済みコントラクト"
+              />
+              で初期化されます。
+              オペコードが集合に存在しないアドレスにアクセスすると、集合に追加されます。
+              関連するオペコードは、
+              <RelativeLink to="#3B" title="EXTCODESIZE" />、
+              <RelativeLink to="#3C" title="EXTCODECOPY" />、
+              <RelativeLink to="#3F" title="EXTCODEHASH" />、
+              <RelativeLink to="#31" title="BALANCE" />、
+              <RelativeLink to="#F1" title="CALL" />、
+              <RelativeLink to="#F2" title="CALLCODE" />、
+              <RelativeLink to="#F4" title="DELEGATECALL" />、
+              <RelativeLink to="#FA" title="STATICCALL" />、
+              <RelativeLink to="#F0" title="CREATE" />、
+              <RelativeLink to="#F5" title="CREATE2" />
+              、そして、
+              <RelativeLink to="#FF" title="SELFDESTRUCT" />
+              です。
             </li>
             <li className="ml-6">
-              Slots: a set of contract address and their storage slot keys that
-              have been accessed. It is initialized to empty. When an opcode
-              accesses a slot that is not present in the set, it adds it to it.
-              The relevant opcodes are <RelativeLink to="#54" title="SLOAD" />{' '}
-              and <RelativeLink to="#55" title="SSTORE" />
+              スロット:{' '}
+              アクセスされたコントラクトアドレスとそのストレージスロットのキーの集合。
+              これは空で初期化されます。
+              オペコードが集合に存在しないスロットにアクセスすると、スロットを集合に追加します。
+              関連するオペコードは、
+              <RelativeLink to="#54" title="SLOAD" />
+              と
+              <RelativeLink to="#55" title="SSTORE" />
+              です。
             </li>
           </ul>
-          When a context reverts, the sets are also reverted to the state they
-          had before that context.
+          コンテキストがリバートすると、集合もそのコンテキスト以前の状態に戻されます。
         </p>
       </SectionWrapper>
 

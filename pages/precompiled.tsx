@@ -43,32 +43,31 @@ const PrecompiledPage = ({
         </Head>
       </React.Fragment>
       <Container className="text-sm leading-6">
-        <H1>Precompiled Contracts</H1>
+        <H1>プリコンパイル済みコントラクト</H1>
 
-        <H2 className="mb-4">Introduction</H2>
+        <H2 className="mb-4">イントロダクション</H2>
         <p className="pb-6">
-          On top of having a set of opcodes to choose from, the EVM also offers
-          a set of more advanced functionalities through precompiled contracts.
-          These are a special kind of contracts that are bundled with the EVM at
-          fixed addresses, and can be called with a determined gas cost. The
-          addresses start from 1, and increment for each contract. New hardforks
-          may introduce new precompiled contracts. They are called from the
-          opcodes like regular contracts, with instructions like{' '}
-          <Link to="#F1" title="CALL" />. The gas cost mentioned here is purely
-          the cost of the contract, and does not consider the cost of the call
-          itself nor the instructions to put the parameters in memory. The
-          precompiled contracts are also available in the{' '}
-          <Link to="playground" title="playground" />.
+          EVMは、一連のオペコードに加え、プリコンパイル済みコントラクトによって、より高度な機能を提供します。
+          これは、固定アドレスでEVMにバンドルされ、決められたガスコストで呼び出すことができる特殊なコントラクトです。
+          アドレスは1から始まり、コントラクトごとにインクリメントされます。
+          新しいハードフォークでは、新しいプリコンパイル済みコントラクトが導入される可能性があります。
+          これらは、通常のコントラクトでの
+          <Link to="#F1" title="CALL" />
+          命令のようにオペコードで呼び出されます。
+          ここで言うガスコストは純粋にコントラクトのコストであり、コール自体のコストやパラメータをメモリに置くための命令は考慮されていません。
+          また、プリコンパイルされたコントラクトは
+          <Link to="playground" title="playground" />
+          で利用可能です。
         </p>
         <p className="pb-6">
-          For all precompiled contracts, if the input is shorter than expected,
-          it is assumed to be virtually padded with zeros at the end. If the
-          input is longer than expected, surplus bytes at the end are ignored.
+          すべてのプリコンパイル済みコントラクトにおいて、入力が期待されるより短い場合は、末尾にゼロを付加した仮想的なパディングがあると見なされます。
+          入力が予想より長い場合は、末尾の余分なバイトは無視されます。
         </p>
         <p className="pb-6">
-          After the hardfork <b>Berlin</b>, all the precompiled contracts
-          addresses are always considered warm. See section{' '}
-          <Link to="about" title="access sets" />.
+          ハードフォーク<b>Berlin</b>
+          の後、すべてのプリコンパイル済みコントラクトのアドレスは、常に「ウォーム」とみなされます。セクション
+          <Link to="about" title="access sets" />
+          を参照してください。
         </p>
       </Container>
 
