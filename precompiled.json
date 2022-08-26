@@ -3,13 +3,13 @@
     "name": "ecRecover",
     "input": "hash | v | r | s",
     "output": "publicAddress",
-    "description": "Elliptic curve digital signature algorithm (ECDSA) public key recovery function"
+    "description": "楕円曲線デジタル署名アルゴリズム（ECDSA）の公開鍵リカバリー関数"
   },
   "0x02": {
     "name": "SHA2-256",
     "input": "data",
     "output": "hash",
-    "description": "Hash function",
+    "description": "ハッシュ関数",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -25,7 +25,7 @@
     "name": "RIPEMD-160",
     "input": "data",
     "output": "hash",
-    "description": "Hash function",
+    "description": "ハッシュ関数",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -41,7 +41,7 @@
     "name": "identity",
     "input": "data",
     "output": "data",
-    "description": "Returns the input",
+    "description": "入力を返す",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -57,7 +57,7 @@
     "name": "modexp",
     "input": "Bsize | Esize | Msize | B | E | M",
     "output": "value",
-    "description": "Arbitrary-precision exponentiation under modulo",
+    "description": "剰余のもとでの任意精度の指数計算",
     "dynamicFee": {
       "byzantium": {
         "inputs": {
@@ -81,7 +81,7 @@
     "name": "ecAdd",
     "input": "x1 | y1 | x2 | y2",
     "output": "x | y",
-    "description": "Point addition (ADD) on the elliptic curve 'alt_bn128'",
+    "description": "楕円曲線'alt_bn128'上の点の加算（ADD）",
     "dynamicFee": {
       "byzantium": {
         "inputs": {
@@ -101,7 +101,7 @@
     "name": "ecMul",
     "input": "x1 | y1 | s",
     "output": "x | y",
-    "description": "Scalar multiplication (MUL) on the elliptic curve 'alt_bn128'",
+    "description": "楕円曲線'alt_bn128'上のスカラー倍算（MUL）",
     "dynamicFee": {
       "byzantium": {
         "inputs": {
@@ -121,7 +121,7 @@
     "name": "ecPairing",
     "input": "x1 | y1 | x2 | y2 | ... | xk | yk",
     "output": "success",
-    "description": "Bilinear function on groups on the elliptic curve 'alt_bn128'",
+    "description": "楕円曲線'alt_bn128'上の群に対する双線形関数",
     "dynamicFee": {
       "homestead": {
         "inputs": {
@@ -137,7 +137,7 @@
     "name": "blake2f",
     "input": "rounds | h | m | t | f",
     "output": "h",
-    "description": "Compression function F used in the BLAKE2 cryptographic hashing algorithm",
+    "description": "BLAKE2暗号学的ハッシュアルゴリズムで使用される圧縮関数F",
     "dynamicFee": {
       "homestead": {
         "inputs": {

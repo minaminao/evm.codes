@@ -52,7 +52,7 @@
   "0a": {
     "input": "a | exponent",
     "output": "a ** exponent",
-    "description": "指数",
+    "description": "指数計算",
     "dynamicFee": {
       "homestead": {
         "inputs": {
