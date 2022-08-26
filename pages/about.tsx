@@ -235,22 +235,19 @@ const AboutPage = () => {
       </SectionWrapper>
 
       <SectionWrapper
-        header={<H3>Memory expansion</H3>}
+        header={<H3>メモリの拡張</H3>}
         anchorKey="memoryexpansion"
       >
         <p className="pb-6">
-          During an execution, the whole memory is accessible, but not for free.
-          When an offset is accessed for the first time (either read or write),
-          it may trigger a memory expansion, which will cost gas. A memory
-          expansion may be triggered when the offset used is bigger than any
-          used before. When that happens, the cost of accessing that higher
-          offset is computed and removed from the total gas available in the
-          current context.
+          実行中、メモリ全体がアクセス可能ですが、無料でアクセスできるわけではありません。
+          オフセットが初めてアクセスされるとき（読み取りまたは書き込みのどちらか）、それはメモリの拡張をトリガーする可能性があり、ガスを消費します。
+          メモリの拡張は、使用されるオフセットが以前に使用されたものよりも大きい場合に引き起こされることがあります。
+          この場合、より大きなオフセットにアクセスするためのコストが計算され、現在のコンテキストで利用可能なガスの合計から削除されます。
         </p>
 
         <p className="pb-4">
           <p className="pb-4">
-            The total cost for a given memory size is computed as follows:
+            与えられたメモリサイズに対する総コストは以下のように計算されます。
           </p>
           <Pre>
             <code>
@@ -264,9 +261,8 @@ const AboutPage = () => {
 
         <p className="pb-4">
           <p className="pb-4">
-            When a memory expansion is triggered however, only the additional
-            chunk of memory has to be paid. The cost of memory expansion for a
-            specific opcode is thus:
+            メモリの拡張が発生した場合、追加されるメモリのチャンク分のみガスを支払う必要があります。
+            特定のオペコードのメモリ拡張にかかるコストは、次のようになります。
           </p>
           <Pre>
             <code>
@@ -276,18 +272,18 @@ const AboutPage = () => {
         </p>
 
         <p className="pb-8">
-          The <code>memory_byte_size</code> can be obtained with{' '}
-          <RelativeLink to="#59" title="MSIZE" />. We can see that the cost
-          grows quadratically with the size, making higher offsets more costly
-          and discouraging to use too much memory. Any opcode accessing memory
-          may trigger an expansion (including, for example,{' '}
-          <RelativeLink to="#51" title="MLOAD" />,{' '}
-          <RelativeLink to="#F3" title="RETURN" /> or{' '}
+          <RelativeLink to="#59" title="MSIZE" />
+          で取得できます。
+          コストはサイズの二次関数的に増加し、オフセットが大きいほどコストが高くなり、メモリの使いすぎを抑制できます。
+          メモリにアクセスするすべてのオペコードは、メモリの拡張をトリガーする可能性があります（たとえば、
+          <RelativeLink to="#51" title="MLOAD" />、
+          <RelativeLink to="#F3" title="RETURN" />
+          、そして、
           <RelativeLink to="#37" title="CALLDATACOPY" />
-          ). Each opcode that can is mentioned in the{' '}
-          <RelativeLink title="reference" />. Note also that an opcode with a
-          byte size parameter of 0 will not trigger a memory expansion,
-          regardless of its offset parameters.
+          です。各オペコードの詳細は
+          <RelativeLink title="reference" />
+          に記載されています。
+          また、バイトサイズパラメータが0のオペコードは、オフセットパラメータに関係なく、メモリの拡張をトリガーしないことに注意してください。
         </p>
       </SectionWrapper>
 
